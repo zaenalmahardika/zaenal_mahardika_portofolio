@@ -1,0 +1,883 @@
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&family=Poppins:wght@400;500;700&family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Trispace:wght@500;700&display=swap');
+/* font-family: 'Moirai One', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Space Mono', monospace;
+font-family: 'Trispace', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trispace', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #bc13fe, transparent);
+    border-radius: 5px;
+}
+html::-webkit-scrollbar{
+    width: 10px;
+    background: black;
+}
+
+
+/* banner */
+.banner-parallax{
+    min-height: 600px;
+    background: url(img/bg/bg-8.jpg) no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-parallax h1{
+    padding: 20px 75px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    align-items: center;
+    color: #fff;
+    box-shadow:
+        0 0 0.2rem #fff,
+        0 0 0.2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+    animation: titleFlicker 1.5s infinite alternate;
+}
+.banner{
+    height: 100vh;
+    padding: 50px;
+    background: url(img/bg/bg-7.jpg) center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.banner .banner-box{
+    width: 70%;
+    min-height:80vh;
+    padding: 50px;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    animation: borderFlicker 7s ease-in-out 2s infinite alternate;
+}
+.banner .banner-box .title{
+    width: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.banner .title h3{
+    background: url(img/bg-title-1.jpg) fixed center center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+.banner .title h1{
+    padding: 20px 0 10px;
+    background: url(img/bg-title-2.jpg) repeat fixed center center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.banner .title p{
+    font-family: 'Space Mono', monospace;
+    color: aliceblue;
+    animation: textFlicker 0.01s ease infinite alternate both;
+}
+.banner .title .icons{
+    width: 100%;
+    margin: 70px 0;
+    display: flex;
+}
+.banner .title .icons i{
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #bc13fe,
+            0 0 82px #bc13fe,
+            0 0 92px #bc13fe,
+            0 0 102px #bc13fe,
+            0 0 151px #bc13fe;
+    animation: textFlicker 0.01s ease infinite alternate both;
+}
+.banner .title .icons i:hover{
+    color: fuchsia;
+}
+.banner .nav{
+    width: 50%;
+    padding: 50px 0 50px 50px;
+    display: flex;
+    flex-direction: column;
+}
+.banner .nav a{
+    padding: 20px 0 0 25px;
+    border-bottom: 1px solid white;
+    font-family: 'Space Mono', monospace;
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    transition: margin 0.4s ease, 
+                border-bottom 0.4s ease, 
+                text-shadow 0.4s ease;
+}
+.banner .nav a:hover{
+    margin: 0 0 0 -30px;
+    border-bottom: 1px solid dodgerblue;
+    cursor: pointer;
+    animation: none;
+}
+
+
+/* aboutMe */
+/* intro */
+.aboutMe-parallax{
+    min-height: 500px;
+    background: url(img/bg/bg-2.jpg) no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutMe-parallax h1{
+    margin: 0 0 20px 0;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+.aboutMe{
+    width: 100%;
+    height: fit-content;
+    background: rgba(0,0,0,0.7);
+}
+.aboutMe .intro{
+    display: flex;
+}
+.intro .intro-text{
+    width: 70%;
+    padding: 70px 120px;
+    background: rgba(0,0,0,0.7);
+    color: rgba(255,255,255,0.9);
+}
+.intro .intro-text p{
+    margin: 0 0 20px 0;
+    font-family: 'Trispace', sans-serif;
+    text-indent: 20px;
+    line-height: 1.2rem;
+}
+.intro .intro-text .direct-btn{
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.intro .intro-text .direct-btn button{
+    padding: 5px 15px;
+    font-weight: 700;
+}
+.intro .intro-image{
+    width: 30%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro .intro-image img{
+    width: 220px;
+    height: 50vh;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #bc13fe,
+            0 0 0.8rem #bc13fe,
+            0 0 2.8rem #bc13fe,
+            inset 0 0 1.3rem #bc13fe; 
+    animation: profileFlicker 5s ease-in-out 2s infinite alternate;
+}
+
+
+/* hobby */
+.hobby-parallax{
+    min-height: 400px;
+    background: url(img/bg/bg-1.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hobby-parallax h1{
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+.hobby{
+    height: 300px;
+    background: rgba(0,0,0,1);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hobby .icons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.hobby .icons .icon{
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hobby .icons .icon div{
+    width: fit-content;
+    height: 45px;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+.hobby .icons .icon div p{
+    font-size: 1rem;
+    font-family: 'Trispace', sans-serif;
+    color: rgba(255,255,255,0.9);
+}
+.hobby .icons .icon img{
+    width: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
+
+
+/* service */
+.service-parallax{
+    min-height: 400px;
+    background: url(img/bg/bg-4.jpg) no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-parallax .title h1{
+    font-size: 3rem;
+    color: #fff;
+}
+.service .cards{
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.service .cards .card{
+    width: 300px;
+    padding: 50px 0 0 0;
+    background: url(img/bg/bg-10.png);
+    border-radius: 10px;
+}
+.service .cards .card h2{
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+}
+.service .cards .card img{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    object-fit: cover;
+    filter: saturate(4);
+}
+.service .cards .card .p-wrapper{
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+}
+.service .cards .card .p-wrapper p{
+    font-family: 'Trispace', sans-serif;
+    text-align: center;
+    text-indent: 20px;
+    line-height: 17px;
+    color: #fff;
+}
+
+
+/* project */
+.project{
+    width: 100%;
+    padding: 80px 0;
+    background: url(img/bg/bg-4.jpg) no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project h1{
+    margin: 0 0 10px 0;
+    padding: 20px;
+    font-size: 3rem;
+    color: #fff;
+    
+}
+.project .p-wrapper{
+    margin:15px 0 30px 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+}
+.project .p-wrapper p{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    animation: textFlicker 0.01s ease infinite alternate both;
+}
+.project .images{
+    width: 100%;
+    background: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.project .images .column{
+    width: 280px;
+    margin: 0 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project .images .column img{
+    width: 100%;
+    margin: 15px 0;
+    border: 1px solid rgba(255,255,255,0.7);
+    filter: brightness(85%);
+    box-shadow:  0 0 0.2rem #fff,
+                0 0 0.4rem #fff;
+    /* box-shadow:
+    0 0 0.2rem #fff,
+    0 0 0.2rem #fff,
+    0 0 1rem #bc13fe,
+    0 0 0.4rem #bc13fe,
+    0 0 1.4rem #bc13fe,
+    inset 0 0 0.6rem #bc13fe; */
+}
+
+/* skills */
+.skills{
+    height: 800px;
+    background: url(img/bg/bg-14.jpg) no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.skills h1.title{
+    padding: 80px;
+    font-size: 3rem;
+    color: #fff;
+}
+.skills .cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.skills .cards .card{
+    width: 350px;
+    padding: 10px;
+    margin: 10px 20px;
+    background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.5));
+    border-radius: 5px;
+}
+.skills .cards .card h1{
+    text-align: center;
+    color: #fff;
+}
+.skills .cards .card ul{
+    height: 100%;
+    list-style: inside;
+}
+.skills .cards .card ul li{
+    color: #fff;
+}
+.skills .cards .card ul li ul{
+    list-style: inside circle;
+    text-indent: 10px;
+}
+
+/* contact me */
+.contact{
+    height: 80vh;
+    display: flex;
+}
+.contact :where(.text, .user){
+    width: 50%;
+}
+.contact .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trispace', sans-serif;
+}
+.contact .text .text-wrapper{
+    width: fit-content;
+}
+.contact .text .text-wrapper h1{
+    font-size: 2.5rem;
+}
+.contact .text .text-wrapper p:nth-child(4){
+    margin: 0 0 20px 0;
+}
+.contact .text .text-wrapper .mail{
+    padding: 0 0 0 50px;
+}
+.contact .user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact .user h2{
+    color: #1b1b1b;
+}
+.contact .user form{
+    width: 90%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact .user form :where(input, textarea){
+    width: 100%;
+    padding: 10px 0 10px 15px;
+    margin: 15px 0;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    background: #f5f5f5;
+}
+.contact .user form button{
+    width: 30%;
+    padding: 8px 0;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.3);
+    border: 0;
+    border-radius: 10px;
+}
+
+/* copyright */
+.copyright{
+    height: 50px;
+    padding: 5px 0 0 0;
+    background: black;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------- Animation ------------- */
+@keyframes textFlicker {
+    from {
+      text-shadow: 1.5px 0 0 #ea36af, -3px 0 0 #75fa69;
+    }
+    to {
+      text-shadow: 2.5px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    }
+  }
+
+@keyframes borderFlicker {
+    10%, 30%, 50%, 70%, 90%{
+      box-shadow:
+              0 0 0.2rem #fff,
+              0 0 0.2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+    }
+    20%, 40%, 60%, 80%, 100%{        
+      box-shadow:
+              0 0 0.5rem #fff,
+              0 0 0.5rem #fff,
+              0 0 1rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+    }     
+}
+
+@keyframes titleFlicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+@keyframes profileFlicker {
+    0%, 53%, 100% {
+        filter: brightness(50%);
+    }
+    20%, 24%, 55% {        
+        filter: brightness(90%);
+
+    }    
+}
+
+.project .images .column1 img:nth-child(1),
+.project .images .column4 img:nth-child(2){
+    animation: projectAnim1 2s ease-in-out 1s infinite alternate both;
+}
+.project .images .column1 img:nth-child(2),
+.project .images .column4 img:nth-child(1){
+    animation: projectAnim2 2s ease-in-out 1s infinite alternate both;
+}
+.project .images .column2 img:nth-child(1),
+.project .images .column3 img:nth-child(2){
+    animation: projectAnim3 2s ease-in-out 1s infinite alternate both;
+}
+.project .images .column2 img:nth-child(2),
+.project .images .column3 img:nth-child(1){
+    animation: projectAnim4 2s ease-in-out 1s infinite alternate both;
+}
+
+@keyframes projectAnim1{
+    25%{
+        filter: brightness(100%);
+        box-shadow:
+        0 0 0.2rem #fff,
+        0 0 0.2rem #fff,
+        0 0 1.5rem #bc13fe,
+        0 0 0.6rem #bc13fe,
+        0 0 1.8rem #bc13fe,
+        inset 0 0 0.8rem #bc13fe;
+    }
+}
+@keyframes projectAnim2{
+    50%{
+        filter: brightness(100%);
+        box-shadow:
+        0 0 0.2rem #fff,
+        0 0 0.2rem #fff,
+        0 0 1rem lightblue,
+        0 0 0.4rem lightblue,
+        0 0 1.4rem fuchsia,
+        inset 0 0 0.7rem fuchsia;
+    }
+}
+@keyframes projectAnim3{
+    75%{
+        filter: brightness(100%);
+        box-shadow:
+        0 0 0.2rem #fff,
+        0 0 0.2rem #fff,
+        0 0 1rem lightblue,
+        0 0 0.4rem lightblue,
+        0 0 1.4rem fuchsia,
+        inset 0 0 0.7rem fuchsia;
+    }
+}
+@keyframes projectAnim4{
+    100%{
+        filter: brightness(100%);
+        box-shadow:
+        0 0 0.2rem #fff,
+        0 0 0.2rem #fff,
+        0 0 1.5rem #bc13fe,
+        0 0 0.6rem #bc13fe,
+        0 0 1.8rem #bc13fe,
+        inset 0 0 0.8rem #bc13fe;
+    }
+}
+
+
+
+/* --------------- Media Query ------------- */
+@media screen and (max-width: 576px){
+    /* banner */
+    .banner-parallax h1{
+        width: 80%;
+        font-size: 2rem;
+    }
+    .banner{
+        padding: 10px;
+    }    
+    .banner .banner-box{
+        width: 100%;
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner .banner-box .title,
+    .banner .banner-box .nav{
+        width: 100%;
+        padding: 10px;
+    }
+    .banner .banner-box .title{
+        text-align: center;
+    }
+    .banner .title h1{
+        font-size: 2.8rem;
+    }
+    .banner .title .icons{
+        width: 100%;
+        margin: 70px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .banner .banner-box .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner .nav a{
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 0;
+        text-align: center;
+        transition: text-decoration 5s ease;
+    }
+    .banner .nav a:hover{
+        margin: 0;
+        text-decoration:dodgerblue;
+        cursor: pointer;
+    }
+    .banner .nav a:active{
+        text-decoration: #fff;
+    }
+
+    /* aboutMe */
+    .aboutMe .intro{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .intro .intro-text{
+        width: 100%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro .intro-text p:nth-child(4){
+        text-indent: 0;
+    }
+    .intro .intro-image{
+        width: 100%;
+        padding: 50px 0 0 0;
+    }
+    .intro .intro-image img{
+        width: 150px;
+        height: 200px;
+    }
+
+    /* hobby */
+    .hobby .icons{
+        display: flex;
+        justify-content: center;
+    }
+    .hobby .icons .icon{
+        border: 0;
+    }
+    .hobby .icons .icon div{
+        width: 70px;
+    }
+    .hobby .icons .icon div p{
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    .hobby .icons .icon img{
+        width: 50%;
+    }
+
+    /* service */
+    .service-parallax .title h1{
+        text-align: center;
+    }
+    .service .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .service .cards .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .service .cards .card img{
+        width: 75%;
+    }
+
+    /* project */
+    .project h1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .project .images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project .images .column img{
+        filter: brightness(100%);
+    }
+    .project .images .column1 img:nth-child(1),
+    .project .images .column4 img:nth-child(2),
+    .project .images .column1 img:nth-child(2),
+    .project .images .column4 img:nth-child(1),
+    .project .images .column2 img:nth-child(1),
+    .project .images .column3 img:nth-child(2),
+    .project .images .column2 img:nth-child(2),
+    .project .images .column3 img:nth-child(1){
+        animation: none;
+    }
+
+    /* .skills */
+    .skills{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .skills h1.title{
+        text-align: center;
+    }
+    .skills .cards .card{
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* contact me */
+    .contact{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact :where(.text, .user){
+        width: 100%;
+    }
+    .contact .text{
+        padding: 50px 0;
+    }
+    .contact .text .text-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .text .text-wrapper h1{
+        text-align: center;
+    }
+    .contact .text .text-wrapper .mail{
+        padding: 0;
+        text-align: center;
+    }
+    .contact .user{
+        padding: 50px 0 70px;
+    }
+
+    .copyright{
+        font-size: 0.7rem;
+    }
+
+}
+@media (min-width: 578px) and (max-width: 992px){
+    /* banner */
+    .banner-parallax h1{
+        width: 60%;
+        font-size: 3rem;
+    }
+    .banner{
+        padding: 10px;
+    }    
+    .banner .banner-box{
+        width: 100%;
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner .banner-box .title,
+    .banner .banner-box .nav{
+        width: 100%;
+        padding: 10px;
+    }
+    .banner .banner-box .title{
+        text-align: center;
+    }
+    .banner .title h1{
+        font-size: 2.8rem;
+    }
+    .banner .title .icons{
+        width: 100%;
+        margin: 70px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .banner .banner-box .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner .nav a{
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 0;
+        text-align: center;
+        transition: text-decoration 5s ease;
+    }
+    .banner .nav a:hover{
+        margin: 0;
+        text-decoration:dodgerblue;
+        cursor: pointer;
+    }
+    .banner .nav a:active{
+        text-decoration: #fff;
+    }
+
+    /* abaout me */
+    .intro .intro-image{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .intro .intro-image img{
+        width: 180px;
+        height: 280px;
+    }
+
+    /* contact */
+    .contact .text{
+        display: flex;
+        justify-content: center;
+    }
+    .contact .text .text-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .text .text-wrapper h1{
+        text-align: center;
+    }
+    .contact .text .text-wrapper .mail{
+        padding: 0;
+        text-align: center;
+    }
+}
